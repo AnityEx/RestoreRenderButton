@@ -3,7 +3,7 @@ bl_info = {
     "name": "Restaura botones de render por AnityEx",
     "description": "Boton de render restaurados como blender 2.79b y dos botones extras",
     "author": "AnityEx",
-    "version": (1, 0, 1),
+    "version": (1, 1, 0),
     "blender": (3,0),
     "location": "Properties>Output>Render",
     "warning": "",
@@ -20,6 +20,7 @@ class BotonRenderAnity (bpy.types.Panel):
     bl_space_type = 'PROPERTIES'
     bl_region_type = 'WINDOW'
     bl_context = "output"
+    bl_order = 1  # <-- Set the panel's order to 1
 
     def draw(self, context):
         layout = self.layout
